@@ -33,9 +33,8 @@ export default {
       <template v-else>
         <TodoFormAdd />
 
-        <TodoItens />
-
-        <TodoEmpty />
+        <TodoItens v-if="$store.state.todos.length" />
+        <TodoEmpty v-else />
       </template>
     </div>
   </div>
